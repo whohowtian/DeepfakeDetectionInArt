@@ -29,6 +29,17 @@ The solution consists of three main components:
 1. **Data Collection**:
    - Dataset was taken from [this Google Drive link](https://drive.google.com/file/d/1vTChp3nU5GQeLkPwotrybpUGUXj12BTK/view?usp=drivesdk). If you use the refined Wikiart dataset, please cite the following paper:
 
+@article{artgan2018,
+  title={Improved ArtGAN for Conditional Synthesis of Natural Image and Artwork},
+  author={Tan, Wei Ren and Chan, Chee Seng and Aguirre, Hernan and Tanaka, Kiyoshi},
+  journal={IEEE Transactions on Image Processing},
+  volume    = {28},
+  number    = {1},
+  pages     = {394--409},
+  year      = {2019},
+  url       = {https://doi.org/10.1109/TIP.2018.2866698},
+  doi       = {10.1109/TIP.2018.2866698}
+}
 
 2. **Preprocessing**:
 - Resize and normalize the images.
