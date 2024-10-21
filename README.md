@@ -55,33 +55,9 @@ The dataset comprises over **5,063 records**, with original images masked betwee
 
 The generated inpainting images were then used as input for the **CNN** and **SVM** models to enhance the detection of deepfakes.
 
-
-## Preprocessing
-The preprocessing of images is a crucial step in preparing the dataset for the GAN model. The following processes are implemented in the code:
-
-### 1. Image Loading
-- **Loading Original Images**: Images are loaded from the specified directory and converted to RGB format to ensure consistency in color representation.
-
-### 2. Resizing
-- **Resizing to Standard Dimensions**: Each original image is resized to **128x128 pixels**. This standardization is essential for feeding the images into the neural network, which requires consistent input dimensions.
-
-```python
-image_resized = image.resize((128, 128))
-```
-### 3. Masking
-- **Random Masking**: To prepare for inpainting, portions of the images are randomly masked. The masking function creates a new image where random regions are obscured. This simulates alterations that the GAN will learn to detect.
-
-```python
-masked_image = mask_random(image_address, output_path=name+"/mask.png").convert("RGB").resize((128, 128))
-```
-
-### 4. Image Generation via Inpainting
--**Using Stable Diffusion for Inpainting**: The resized images and their corresponding masks are processed through the Stable Diffusion Inpainting model to generate new images that fill the masked areas. A prompt is provided to guide the generation process.
-
-```python
-prompt = "generate a painting compatible with the rest of the image"
-image_inpainting = pipe(prompt=prompt, image=image_resized, mask_image=masked_image).images[0]
-```
+### 2. Preprocessing
+- Resize and normalize the images.
+- Augment the dataset to enhance model generalization.
 
 ### 3. Data Augmentation and Adversarial Training (GAN)
 - Train a GAN to generate synthetic deepfake images.
