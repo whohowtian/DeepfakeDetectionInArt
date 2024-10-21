@@ -5,6 +5,8 @@
 ## Project Overview
 This project aims to develop a robust system for detecting deepfake images of the inpainted class by combining three powerful machine learning models: Convolutional Neural Network (CNN), Support Vector Machine (SVM), and Generative Adversarial Network (GAN). The goal is to create a multi-model approach that leverages the strengths of each technique to improve the accuracy and reliability of deepfake detection.
 
+Team Members: Ying Xuan, Bryan, Zhi You, Zhi Xuan, Cedric, Kaegene, Hao Tian, Hong Teng
+
 ### Why Deepfake Detection?
 With the rapid advancement of AI, deepfake technology has made it possible to generate realistic fake images and videos, which can be used for malicious purposes such as misinformation, identity theft, and more. This project seeks to address these challenges by developing a solution capable of identifying altered images and preventing the spread of misinformation for inpainted artworks.
 
@@ -27,19 +29,8 @@ The solution consists of three main components:
 
 ## Workflow
 1. **Data Collection**:
-   - Dataset was taken from [this Google Drive link](https://drive.google.com/file/d/1vTChp3nU5GQeLkPwotrybpUGUXj12BTK/view?usp=drivesdk). If you use the refined Wikiart dataset, please cite the following paper:
-
-@article{artgan2018,
-  title={Improved ArtGAN for Conditional Synthesis of Natural Image and Artwork},
-  author={Tan, Wei Ren and Chan, Chee Seng and Aguirre, Hernan and Tanaka, Kiyoshi},
-  journal={IEEE Transactions on Image Processing},
-  volume    = {28},
-  number    = {1},
-  pages     = {394--409},
-  year      = {2019},
-  url       = {https://doi.org/10.1109/TIP.2018.2866698},
-  doi       = {10.1109/TIP.2018.2866698}
-}
+   - Dataset was taken from [this Google Drive link](https://drive.google.com/file/d/1vTChp3nU5GQeLkPwotrybpUGUXj12BTK/view?usp=drivesdk).
+   - 
 
 2. **Preprocessing**:
 - Resize and normalize the images.
@@ -60,6 +51,7 @@ The solution consists of three main components:
 6. **Model Evaluation**:
 - Evaluate the combined model's performance using metrics such as accuracy, precision, recall, and F1-score.
 - Perform cross-validation to assess the robustness of the system.
+
 
 ## Installation
 To run this project, you'll need the following dependencies:
